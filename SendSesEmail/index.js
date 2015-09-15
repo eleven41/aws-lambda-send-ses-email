@@ -1,4 +1,4 @@
-﻿console.log('Version 0.1.1');
+﻿console.log('Version 0.1.3');
 
 var aws = require('aws-sdk');
 
