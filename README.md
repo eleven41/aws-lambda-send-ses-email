@@ -13,44 +13,41 @@ EC2 instances.
 1. Create an IAM Role for executing AWS Lambda functions. 
 2. Give your new IAM Role the following policy:
 
-```
+```json
 {
-    "PolicyName" : "aws-lambda-send-ses-email-policy",
-    "PolicyDocument" : {
-        "Version" : "2012-10-17",
-        "Statement" : [
-            {
-                "Effect" : "Allow",
-                "Action" : [
-                    "logs:CreateLogGroup",
-                    "logs:CreateLogStream",
-                    "logs:PutLogEvents"
-                ],
-                "Resource" : "arn:aws:logs:*:*:*"
-            },
-            {
-                "Effect" : "Allow",
-                "Action" : [
-                    "cloudwatch:PutMetricData"
-                ],
-                "Resource" : "*"
-            },
-            {
-                "Effect" : "Allow",
-                "Action" : [
-                    "ses:SendEmail"
-                ],
-                "Resource" : "*"
-            },
-            {
-                "Effect" : "Allow",
-                "Action" : [
-                    "s3:GetObject"
-                ],
-                "Resource" : "*"
-            }
-        ]
-    }
+    "Version" : "2012-10-17",
+    "Statement" : [
+        {
+            "Effect" : "Allow",
+            "Action" : [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource" : "arn:aws:logs:*:*:*"
+        },
+        {
+            "Effect" : "Allow",
+            "Action" : [
+                "cloudwatch:PutMetricData"
+            ],
+            "Resource" : "*"
+        },
+        {
+            "Effect" : "Allow",
+            "Action" : [
+                "ses:SendEmail"
+            ],
+            "Resource" : "*"
+        },
+        {
+            "Effect" : "Allow",
+            "Action" : [
+                "s3:GetObject"
+            ],
+            "Resource" : "*"
+        }
+    ]
 }
 ```
 
