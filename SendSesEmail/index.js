@@ -21,9 +21,18 @@ exports.handler = function (event, context) {
     if (event.name == null) {
         event.name = event.email;
     }
-
+    
+    // Make sure we have a subject.
+    // If the event didn't include it, then
+    // pull it from the configuration.
+    // If we still don't have a subject, then
+    // just make one up.
     if (event.subject == null) {
         event.subject = config.defaultSubject;
+        
+        if (event.subject == null) {
+            event.subject = "Mail from {{name}}";
+        }
     }
     
     console.log('Loading template from ' + config.templateKey + ' in ' + config.templateBucket);
