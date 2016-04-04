@@ -38,6 +38,7 @@
     <Compile Include="_testdriver.js" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="package.json" />
     <Content Include="Templates\Template.html" />
     <Content Include="_sampleEvent.json" />
   </ItemGroup>
