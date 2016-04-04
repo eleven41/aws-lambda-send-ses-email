@@ -1,0 +1,18 @@
+﻿{
+    "name": "aws-lambda-send-ses-email",
+    "version": "0.1.3",
+
+    "homepage": "https://github.com/eleven41/aws-lambda-send-ses-email",
+    "author": {
+        "name": "Matt Houser"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/eleven41/aws-lambda-send-ses-email.git"
+    },
+
+    "dependencies": {
+        "aws-sdk": ">=2.1.8",
+        "markup-js": "1.5.21"
+    }
+}
